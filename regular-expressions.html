@@ -24,7 +24,7 @@
         // Match a Literal String with Different Possibilities
 
         let petString = 'Ashish has a pet cat.';
-        let petRegex = /dog|cat|bird/;
+        let petRegex = /dog|ct|bird/;
         let petResult = petRegex.test(petString);
         console.log(petResult);
 
@@ -133,7 +133,7 @@
         console.log(countrult);
 
         // Match Everything But Letters and Numbers [\W]
-        
+
         // Match All Numbers [0-9]
 
         let movieName = "2001: A Space Odyssey";
@@ -149,7 +149,85 @@
         console.log(result3);
 
         // Restrict Possible Usernames
-        
+
+        // Match Whitespace
+
+        let whitematch = "Whitespace is important in separating words";
+        let whiteRegx = /\s/gi;
+        let whiteRult = whitematch.match(whiteRegx);
+        console.log(whiteRult);
+
+        // Match Non-Whitespace Characters
+
+        let nonwhite = "Whitespace is important in separating words";
+        let nonRegx = /\S/gi;
+        let nonRelt = nonwhite.match(nonRegx);
+        console.log(nonRelt);
+
+        // Specify Upper and Lower Number of Matches {0,0}
+
+        let ohStr = "Allllu Gupta";
+        let ohregx = /al{2,8}u\sGupta/gi;
+        let ohRelt = ohStr.match(ohregx);
+        console.log(ohRelt);
+
+        // Specify Only the Lower Number of MatchesPassed
+
+        let haStr = "Ashhhhhhhh ish";
+        let haRegx = /ash{3,}\sish/i;
+        let haRely = haStr.match(haRegx);
+        console.log(haRely);
+
+        // Specify Exact Number of Matches
+
+        let timStr = "Timmmmber";
+        let timRegx = /tim{4}ber/i;
+        let timRelt = timStr.match(timRegx);
+        console.log(timRelt);
+
+        // Check for All or None
+
+        let favStr = "Ashish";
+        let favRegx = /aa?shish/i;
+        let favRelt = favStr.match(favRegx);
+        console.log(favRelt);
+
+        // Positive and Negative Lookahead
+
+        let sampleWord = "astronaut133";
+        let pwRegex = /^\D(?=\w{5})(?=\w*\d{2})/; // Change this line
+        let result4 = pwRegex.test(sampleWord);
+        console.log(result4);
+
+        // Check For Mixed Grouping of Characters
+
+        let myString = "Eleanor Roosevelt";
+        let myRegex1 = /(Franklin|Eleanor)\sRoosevelt/gi;  
+        let result5 = myRegex1.test(myString);
+        console.log(result5);
+
+        // Reuse Patterns Using Capture Groups
+
+        let repeatNum = "42 42 42";
+        let reRegex6 = /(\d+)\s\1/;
+        // let reRegex6 = /^(\d+)\s\1\s\1$/;
+        let result6 = reRegex6.test(repeatNum);
+        console.log(result6);
+
+        // Use Capture Groups to Search and Replace
+
+        let str7 = "three one two four";
+        let fixRegex = /(\w+)\s(\w+)\s(\w+)\s(\w+)/;  
+        let replaceText = "$4 $2 $1 $3";  
+        let result7 = str7.replace(fixRegex, replaceText);
+        console.log(result7);
+
+        // Remove Whitespace from Start and End
+
+        let hello = "   Hello, World!  ";
+        let wsRegex = /^\s+|\s+$/g;
+        let result8 = hello.replace(wsRegex, "");
+        console.log(result8)
     </script>
 </body>
 
