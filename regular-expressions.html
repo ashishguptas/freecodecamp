@@ -195,7 +195,7 @@
         // Positive and Negative Lookahead
 
         let sampleWord = "astronaut133";
-        let pwRegex = /^\D(?=\w{5})(?=\w*\d{2})/; // Change this line
+        let pwRegex = /^\D(?=\w{5})(?=\w*\d{2})/;
         let result4 = pwRegex.test(sampleWord);
         console.log(result4);
 
@@ -227,7 +227,23 @@
         let hello = "   Hello, World!  ";
         let wsRegex = /^\s+|\s+$/g;
         let result8 = hello.replace(wsRegex, "");
-        console.log(result8)
+        console.log(result8);
+
+        // excercise
+
+        const a = /one/;
+        const b = /two/g;
+        const c = /three/gi;
+
+        const myConst = 'one, two, one, two, three'; 
+        const dollerNum = "$1 $2 $1 $2 $3";
+        console.log({
+            a:myConst.replace(dollerNum),
+            b:myConst.replace(dollerNum),
+            c:myConst.replace(dollerNum)
+        });    
+        
+        
     </script>
 </body>
 
