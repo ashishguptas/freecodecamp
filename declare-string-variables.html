@@ -222,6 +222,117 @@
         // console.log(resultArry);
 
         // Understanding Boolean Values
+
+        function welcomeBoolean() {
+            return true;
+        }
+        welcomeBoolean();
+
+        // Use Conditional Logic with If Statements 
+
+        function trueOrFalse(whenTrue) {
+            var whenTrue = 1;
+            if (whenTrue == 1) {
+                return "It is true";
+            }
+            return "It is false";
+        }
+        trueOrFalse();
+
+        // Comparison with the Equality Operator
+
+        function equalFun(numbers) {
+            numbers = 10;
+            if (numbers == '10') {
+                return "True"
+            }
+            return "false"
+        }
+        equalFun();
+
+        // Comparison with the Strict Equality Operator
+
+        function strictFun(val) {
+            if (val === 7) {
+                return "true";
+            }
+            return "false";
+        }
+        strictFun(7);
+
+        // Practice comparing different values
+
+        function campareFun(a, b) {
+            a = 10;
+            b = '10';
+            if (a === b) {
+                return "True";
+            }
+            return "False"
+        }
+        campareFun();
+
+        // Comparison with the Inequality Operator
+
+        // The inequality operator (!=) is the opposite of the equality operator. It means "Not Equal" and returns false where equality would return true and vice versa. Like the equality operator, the inequality operator will convert data types of values while comparing.
+
+        function inEqual(numbers) {
+            numbers = 50;
+            if (numbers != 40) {
+                return "True";
+            }
+            return "False";
+        }
+        inEqual();
+
+        // Comparison with the Strict Inequality Operator
+
+        function strictNot(numbers) {
+            numbers = 50;
+            if (numbers !== 50) {
+                return "True";
+            }
+            return "False";
+        }
+        strictNot();
+
+        // Comparison with the Greater Than Operator
+
+        function greaterThan(vals) {
+            if (vals > 100) {
+                return "100"
+            }
+            if (vals > 10) {
+                return "10"
+            }
+            return "False"
+        }
+        greaterThan(10);
+
+        // Comparison with the Greater Than Or Equal To Operator
+
+        function greatEqual(vale) {
+           
+            if (vale >= 100) {
+                return "True"
+            }
+            return "False"
+        }
+
+        greatEqual(20);
+
+        // Comparison with the Less Than Operator [<]
+        // Comparison with the Less Than Or Equal To Operator [<=]
+
+        // Comparisons with the Logical And Operator
+
+        function logicalOperat(logocalValue1,logicValue2){
+            if(logocalValue1 <= logicValue2 && logocalValue1 >= logicValue2){
+                return true
+            }
+            return false
+        }
+        logicalOperat(10,10)
     </script>
 </body>
 
