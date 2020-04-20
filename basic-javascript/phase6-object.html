@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+
+        // Build JavaScript Objects
+
+        var objName = {
+            name: "Ashish",
+            age: 23,
+            total: "outlate"
+        }
+        console.table({ objName })
+
+        // Accessing Object Properties with Dot Notation
+        var accessObj = objName.name;
+        var accessObj = objName["age"];
+        console.log(accessObj);
+
+        // Accessing Object Properties with Bracket Notation
+
+        var obj2 = {
+            place: "Mumbai",
+            pinCode: 400055
+        }
+        // obj2["place"];
+        console.log(obj2["place"]);
+
+        // Accessing Object Properties with Variables
+
+        var car = {
+            carName: "honda",
+            bikeModule: 45,
+            autoCar: "Bajaj"
+        }
+
+        var placeText = "autoCar";
+        var placeName = car[placeText];
+        console.log(placeName);
+
+        // Updating Object Properties
+
+        var item = {
+            food: "Rice",
+            fruit: 'Mango',
+            spice: 'Pani Puri'
+        }
+        item.food = "Rice and daal";
+        console.table(item.food);
+
+        // Add New Properties to a JavaScript Object
+
+        var addObj = {
+            add: "add one",
+            add2: "add two"
+        }
+        addObj.add3 = "add three";
+        console.log(addObj);
+
+        // Delete Properties from a JavaScript Object
+
+        var deleteObj = {
+            elon: "space X",
+            jeff: 'amazone',
+            bill: 'microsoft'
+        }
+        delete deleteObj.jeff;
+        console.log(deleteObj);
+
+        // Using Objects for Lookups
+
+        function phoneticLookup(val) {
+            var result = "";
+            var lookup = {
+                alpha: "Adams",
+                bravo: "Boston",
+                charlie: "Chicago",
+                delta: "Denver",
+                echo: "Easy",
+                foxtrot: "Frank"
+            }
+            result = lookup[val];
+            console.log(result)
+        }
+        phoneticLookup("charlie");
+
+        // Testing Objects for Properties
+
+        // Accessing Nested Objects
+        var myStorage = {
+            "car": {
+                "inside": {
+                    "glove box": "maps",
+                    "passenger seat": "crumbs"
+                },
+                "outside": {
+                    "trunk": "jack"
+                }
+            }
+        };
+
+        var gloveBoxContents = myStorage.car.inside["glove box"];
+        console.log(gloveBoxContents);
+
+        // Accessing Nested Arrays
+        
+        var myPlants = [
+            {
+                type: "flowers",
+                list: [
+                    "rose",
+                    "tulip",
+                    "dandelion"
+                ]
+            },
+            {
+                type: "trees",
+                list: [
+                    "fir",
+                    "pine",
+                    "birch"
+                ]
+            }
+        ];
+
+
+        var secondTree = myPlants[1].list[1];
+        console.log(secondTree);
+
+    </script>
+</body>
+
+</html>

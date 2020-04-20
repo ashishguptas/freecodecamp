@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean and Function</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <script type="text/javascript">
+        // Returning Boolean Values from Functions
+        function isLess(firstValue, secondValue){
+            var process = "";
+            return firstValue > secondValue;
+        }
+        process = isLess(15,5);
+        document.getElementById("demo").innerHTML = process;
+
+        // Return Early Pattern for Functions
+
+        function abTest(a,b){
+            results = "";
+            if (a < 0 || b < 0){
+                return undefined;
+            }
+        }
+        results =  abTest(2,2);
+        console.log(results);
+
+        // Counting Cards
+
+        var count = 0;
+        function cc(cards){
+            switch(cards){
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    count++;
+                case 10:
+                case "J":
+                case "Q":
+                case "K":
+                case "A":
+                    count--
+            }
+            if(count > 0){
+                return count + " Bet";
+            } else {
+                return count + " Hold"
+            }
+        }
+        cc(2); cc(3); cc(7); cc('K'); cc('A');
+    </script>
+    
+</body>
+</html>
