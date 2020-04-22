@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+
+<body>
+    <p id="for">For loop</p>
+    <script type="text/javascript">
+        // Iterate with JavaScript While Loops
+        var ourArry = [];
+        var i = 5;
+        while (i >= 0) {
+            ourArry.push(i);
+            i--;
+            console.log(i)
+        }
+
+        // Iterate with JavaScript For Loops
+
+        var myArray = [];
+        for (var i = 1; i <= 5; i++) {
+            myArray.push(i);
+            console.log(i)
+        }
+
+        // Iterate Odd Numbers With a For Loop
+
+        var oddArray = [];
+        for (var oddNum = 21; oddNum < 30; oddNum += 2) {
+            oddArray.push(oddNum);
+            console.log(oddNum)
+        };
+
+        // Count Backwards With a For Loop
+
+        var countBack = [];
+        for (minusNum = 9; minusNum >= 1; minusNum -= 2) {
+            countBack.push(minusNum);
+            console.log(minusNum)
+        }
+
+        // Iterate Through an Array with a For Loop
+
+        var lengthArry = [31, 32, 33, 34, 35];
+        for (var j = 0; j < lengthArry.length; j++) {
+            j = lengthArry[j];
+            console.log(j)
+        }
+
+        // Nesting For Loops
+
+        let hash = "";
+        for (var q = 0; q < 5; q++) {
+            hash += "#";
+            console.log(hash)
+        }
+
+        function multiplyAll(arr) {
+            var product = 1;
+            for(var i = 0;i<arr.length;i++){
+                for(var j = 0;j<arr[i].length;j++){
+                    product = product * arr[i][j];
+                    console.log(product)
+                }
+            }
+            // console.log(product)
+        }
+
+        multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+        // Iterate with JavaScript Do...While Loops
+
+        let atRate = "";
+        let p = 0;
+        do{
+            atRate += " @ ";
+            p++
+            console.log(atRate)
+        }while(p < 5)
+
+        // Replace Loops using Recursion
+
+        function sum(arr,n){
+            if(n <= 0){
+                return 0
+            } else{
+                return sum(arr,n-1)+(arr[n-1])
+            }
+        }
+        sum(5,0);
+
+        // Profile Lookup
+    </script>
+</body>
+
+</html>
