@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        // Use Arrow Functions to Write Concise Anonymous Functions
+
+        const date = () => new Date();
+
+        // Write Arrow Functions with Parameters
+
+        const multiPara = (para1, para2) => {
+
+        }
+
+        // Set Default Parameters for Your Functions
+
+        const incre = (numbers, value = 1) => numbers + value;
+
+
+        const x = 4;
+        const nums = []
+        for (var i = 0; i < x; i++); {
+            nums.push(i + 1);
+        }
+        console.log(nums);
+        // Use the Rest Parameter with Function Parameters
+
+        const sum = (...args) => {
+            return args.reduce((a, b) => a + b, 0);
+        }
+        console.log(sum(4, 5, 6));
+
+        // Use the Spread Operator to Evaluate Arrays In-Place
+
+        const arr = ["jan", "feb", "march"];
+        let arr2 = [];
+        arr2 = [...arr];
+        console.log(arr2);
+
+        // Use Destructuring Assignment to Extract Values from Objects
+
+        const cars = {
+            carFirst: "BMW",
+            carSecond: "jaguar"
+        }
+
+        const { carFirst, carSecond } = cars;
+        console.log(cars);
+
+        // Use Destructuring Assignment to Assign Variables from Objects
+
+        const people = {
+            nameFirst: "Ashish",
+            nameSecond: "Lalluram",
+            nameThird: "Gupta"
+        }
+        const { nameFirst: nickName, nickThird: nick } = people;
+        console.log(nickName);
+
+        // Use Destructuring Assignment to Assign Variables from Nested Objects
+
+        const LOCAl_FORECAST = {
+            yesterday: { low: 61, high: 75 },
+            today: { low: 64, high: 77 },
+            tomorrow: { low: 68, high: 80 }
+        }
+
+        const { tomorrow: { low: lowToday, high: highToday } } = LOCAl_FORECAST;
+        console.log(lowToday);
+
+        // Use Destructuring Assignment to Assign Variables from Arrays
+
+        const [aap, bjp] = [1, 2, 3, 4];
+        console.log(aap, bjp);
+
+        let A = 10;
+        let B = 20;
+        [A, B] = [B, A]
+        console.log(A, B)
+
+        // Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+
+        const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        function removeFirstTwo(list) {
+            const [a, b, ...arrs] = list;
+            console.log(arrs);
+        }
+        const arrs = removeFirstTwo(source);
+
+        // Use Destructuring Assignment to Pass an Object as a Function's Parameters
+        const stats = {
+            max: 56.78,
+            standard_deviation: 4.34,
+            median: 34.54,
+            mode: 23.87,
+            min: -0.75,
+            average: 35.85
+        };
+        stats.maa = "50%";
+        const half = ({ max, min }) => (max + min);
+        console.log(stats);
+
+        // Create Strings using Template Literals
+
+        let arra1 = [10, 20];
+        let arra2 = [3, 90];
+        outpusts = arra1.concat(arra2)
+        console.log(outpusts)
+
+        // Create Strings using Template Literals
+
+        const tempLit = {
+            myName: "Ashish",
+            myage: 23
+        }
+        const tempOut = `Hi, My name is ${tempLit.myName} and \ni am a ${tempLit.myage} year old`;
+        console.log(tempOut);
+
+        const result1 = {
+            success: ["max-length", "no-amd", "prefer-arrow-functions"],
+            failure: ["no-var", "var-on-top", "linebreak"],
+            skipped: ["id-blacklist", "no-dup-keys"]
+        };
+
+        function makeList(arr1) {
+            const resultDisplayArray = [];
+            for(var i = 0; i<arr.length;i++){
+                resultDisplayArray.push(`<li class="test">${arr1[i]}</li>`)
+            }
+            console.log(resultDisplayArray)
+        }
+
+        makeList(result1.success);
+
+        // Write Concise Object Literal Declarations Using Object Property Shorthand
+
+        const createPerson = (nams,ages,genders) => ({nams,ages,genders});
+
+        // Write Concise Declarative Functions with ES6
+
+        const person = {
+            names : 'Allu',
+            sayHello(){
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - Explore Differences Between the var and let Keywords</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const x = 0.1;
+        const y = 0.2;
+        if(x + y == 0.3){
+            console.log("True")
+        }
+        console.log(x+y);
+
+        // Explore Differences Between the var and let Keywords
+
+        var camper = "suuu";
+        var camper = "Reee";
+        console.log(camper);
+
+        // let charm = "Blue occen";
+        let charm = "orange osccen";
+        charm = "Arange osccen";
+        console.log(charm);
+
+        "use strict";
+        var p = 10;
+        console.log(p);
+
+        // Compare Scopes of the var and let Keywords
+
+        // Declare a Read-Only Variable with the const Keyword - can not be reassign value
+
+        const FRUIT = "Apple";
+        console.log(FRUIT);
+
+        // Mutate an Array Declared with constPassed
+
+        const num = [3,2,1];
+        num[0]=1,
+        num[1]=2,
+        num[2]=3
+        console.log(num);
+
+        // Prevent Object Mutation
+    </script>
+</body>
+</html>
