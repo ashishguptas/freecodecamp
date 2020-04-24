@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach Array Method</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const array = [1,2,3,4,5,6,7,8,9,10]
+        array.forEach((item,index,arr) => {
+            console.log(array);
+        });
+
+        let findNumber = ['1','5','1','8','5','5','1','3','6','1','5','9','8','7'];
+        let countLetter = {};
+        findNumber.forEach(fidLett =>{
+            if(countLetter[fidLett]){
+                countLetter[fidLett]++;
+            } else{
+                countLetter[fidLett] = 1;
+            }
+        });
+        console.log(countLetter);
+
+        let findName = ["Ashish","Gupta","Lalluram","Gupta",'Ashish'];
+        let countName = {};
+        findName.forEach(itemName => {
+            if(countName[itemName]){
+                countName[itemName]
+            } else{
+                countName[itemName] = 1;
+            }
+        });
+        console.log(countName)
+    </script>
+</body>
+</html>
