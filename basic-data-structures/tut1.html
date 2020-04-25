@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Data Structures</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Use an Array to Store a Collection of Data
+
+        let complax = [
+            [
+                {
+                    one: 1,
+                    two: 2
+                }
+            ],
+            [
+                "firstName",
+                "secondName"
+            ],
+            5000,
+            500,
+            50,
+            5
+        ]
+
+        console.log(complax[0][0]);
+
+        // Access an Array's Contents Using Bracket Notation
+
+        let Arrays = ["Name", "Place", "Visit"];
+        Arrays[1] = "Park";
+        console.log(Arrays);
+
+        // Add Items to an Array with push() and unshift()
+
+        let mixedArr = [];
+        function mixedArry(arr) {
+            arr.unshift('I', 2, 'Three');
+            arr.push(7, 'VIII', 'Nine')
+            return arr;
+        }
+        mixedArr = mixedArry(['IV', 5, 'six']);
+        console.log(mixedArr);
+
+        // Remove Items from an Array with pop() and shift()
+        let popShiftResult = [];
+        function popShift(arr) {
+            let popMathad = arr.pop();
+            let shiftMathad = arr.shift();
+            return [popMathad, shiftMathad];
+        }
+        popShiftResult = popShift(['challenge', 'is', 'not', 'complete']);
+        console.log(popShiftResult);
+
+        // Remove Items Using splice()
+        const arrNumber = [2, 4, 5, 1, 7, 5, 2, 1];
+        arrNumber.splice(1, 4);
+        console.log(arrNumber);
+
+        // Add Items Using splice()
+
+        const num = [1, 2, 3, 5, 5, 5, 7, 8, 9];
+        const indexNum = 3;
+        const indexdelete = 3;
+        num.splice(indexNum, indexdelete, 4, 5, 6);
+        console.log(num);
+
+        // Copy Array Items Using slice()
+
+        function sliceMathad(arr) {
+            let sliceArry = arr.slice(3, 5);
+            console.log(sliceArry);
+            console.log(arr)
+        }
+        sliceMathad(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']);
+
+        // Copy an Array with the Spread Operator
+
+        function copyMachine(arr, num) {
+            let newArr = [];
+            while (num >= 1) {
+                newArr.push(arr)
+                num--;
+            }
+            return newArr;
+        }
+        console.log(copyMachine([true, false, true], 2));
+
+        // Combine Arrays with the Spread Operator
+
+        function spredOp(){
+            let spredArr = ['live','in'];
+            let mergeSpred = ['I','am',...spredArr,'Mumbai'];
+            // return mergeSpred;
+            console.log(mergeSpred)
+        }
+        spredOp();
+
+        const [a, ...b] = ['1',true,'check',456];
+        console.log(b)
+    </script>
+</body>
+
+</html>
