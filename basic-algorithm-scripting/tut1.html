@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Basic Algorithm Scripting</title>
+    <style>
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>tet</h1>
+    <h2>test2</h2>
+
+    <script type="text/javascript">
+        // Convert Celsius to Fahrenheit
+
+        function convertCel(celsius) {
+            let fahrenheit = celsius * 9 / 5 + 32;
+            console.log(fahrenheit)
+        }
+        convertCel(30)
+
+        // Reverse a String
+
+        function reverStr(str) {
+            // for(var reversNum = '', i = str.length; i >= 0; i--){
+            //     reversNum += str[i];
+            // }
+            for (var riverStr = '', i = str.length - 1; i >= 0; i--) {
+                riverStr += str[i];
+            }
+            console.log(riverStr);
+        }
+        reverStr([9, 8, 7, 6, 5, 4, 3, 2, 1]);
+
+        function reverName(nameStr) {
+            for (var nameReview = '', i = nameStr.length - 1; i >= 0; i--) {
+                nameReview += nameStr[i];
+            }
+            console.log(nameReview)
+        }
+
+        reverName('Allu');
+
+        function riverseWwe(wweName) {
+            var wweName = "WWE";
+            for (var rivers = '', i = wweName.length - 1; i >= 0; i--) {
+                rivers += wweName[i];
+                console.log(rivers)
+            }
+        }
+        riverseWwe();
+
+
+        // Factorialize a Number
+
+        function factorialize(num) {
+            for (var pro = 1; num > 0; num--)
+                pro *= num;
+            console.log(pro)
+        }
+
+        factorialize(5);
+
+        // Find the Longest Word in a String
+
+        function findLongestWordLength(str) {
+            str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+            var findLength = str.split(' ');
+            var wordLength = 0;
+            for (var i = 0; i < findLength.length; i++) {
+                if (findLength[i].length > wordLength) {
+                    wordLength = findLength[i].length;
+                }
+            }
+            console.log(wordLength)
+        }
+
+        findLongestWordLength();
+
+        // Return Largest Numbers in Arrays
+
+        function largestOfFour(arr) {
+            var largetNum = [0, 0, 0, 0];
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr[i].length; j++) {
+                    if (arr[i][j] > largetNum[i]) {
+                        largetNum[i] = arr[i][j];
+                    }
+                }
+            }
+            console.log(largetNum)
+        }
+
+        largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+        // Confirm the Ending
+
+        function confirmEnding(str, target) {
+            var confir = target.length;
+            var sub = str.slice(-confir);
+            if (sub === target) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        confirmEnding("Bastian", "n");
+
+
+        // Repeat a String Repeat a String
+        function repeatStringNumTimes(str, num) {
+            var repeat = '';
+            while (num > 0) {
+                repeat += str;
+                num--
+            }
+            console.log(repeat)
+        }
+
+        repeatStringNumTimes("abc", 3);
+
+        function test() {
+            var hash = '';
+            for (i = 0; i < 3; i++) {
+                hash += '#'
+                console.log(hash)
+            }
+        }
+        test();
+
+        // Truncate a String
+
+        function truncateString(str, num) {
+            if (str.length > num) {
+                return str.slice(0, num) + '...'
+            } else {
+                return false
+            }
+        }
+
+        truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+        // Finders Keepers
+
+        function findElement(arr, func) {
+            let num = 0;
+            for (var i = 0; i < arr.length; i++) {
+                num = arr[i]
+                if (func(num)) {
+                    return num
+                }
+            }
+            return undefined;
+        }
+
+        findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+        // Boo who
+
+        function booWho(bool) {
+            return typeof bool === 'boolean';
+        }
+
+        booWho(null);
+
+        // Title Case a Sentence
+
+        function titleCase(str) {
+            var convertToArray = str.toLowerCase().split(" ");
+            var result = convertToArray.map(function (val) {
+                return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+            });
+            return result.join(" ");
+        }
+
+
+        titleCase("I'm a little tea pot");
+
+        // Slice and Splice
+
+        function frankenSplice(arr1, arr2, n) {
+            let localArr = arr2.slice();
+            // console.log(localArr)
+            for (let i = 0; i < arr1.length; i++) {
+                localArr.splice(n, 0, arr1[i]);
+                n++;
+            }
+            console.log(localArr)
+        }
+
+        frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+        // Falsy Bouncer
+
+        function bouncer(arr) {
+            let newArry = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i]) {
+                    arr[i] += newArry.push(arr[i]);
+                }
+            }
+            console.log(newArry)
+        }
+
+        bouncer([7, "ate", "", false, 9]);
+
+        // Where do I Belong
+
+        function getIndexToIns(arr, num) {
+            arr.sort(function (a, b) {
+                // console.log(a-b)
+                return a - b;
+            });
+            for (var a = 0; a < arr.length; a++) {
+                if (arr[a] >= num) {
+                    console.log(a)
+                }
+            }
+            console.log(arr.length)
+        }
+
+        getIndexToIns([40, 60], 50);
+
+        // Mutations
+
+        function mutation(arr) {
+            let firstArr = arr[0].toLowerCase();
+            let secondArr = arr[1].toLowerCase();
+            for (var i = 0; i < arr.length; i++) {
+                if (secondArr.indexOf(firstArr[i]) < 0) {
+                    console.log(false)
+                }
+            }
+            console.log(true);
+        }
+
+        mutation(["hello", "hey"]);
+
+
+        // Chunky Monkey
+
+        function chunkArrayInGroups(arr, size) {
+            var arr2 = [];
+            for(var i = 0; i < arr.length; i += size){
+                arr2.push(arr.slice(i, i + size))
+            }
+            console.log(arr2)
+        }
+
+        chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
+    </script>
+</body>
+
+</html>
