@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programming Challenges</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        // Create a Basic JavaScript Object
+
+        let dog = {
+            name: 'German Shafard',
+            numlegs: 4
+        }
+        console.log(dog);
+
+        // Use Dot Notation to Access the Properties of an Object
+        let dogs = {
+            name: 'German Shafard',
+            numlegs: 4
+        }
+        console.log(dogs.name);
+        console.log(dogs.numlegs);
+
+        // Create a Method on an Object
+
+        let doggy = {
+            name: 'German Shafard',
+            numlegs: 4,
+            sayLegs: function () {
+                console.log("This dog has " + doggy.numlegs + " legs.")
+            }
+        }
+        doggy.sayLegs();
+
+        // Make Code More Reusable with the this Keyword
+
+        let thisMeth = {
+            name: 'Ashish',
+            surName: 'Gupta',
+            thisFun: function () {
+                console.log('I am a ' + this.name + ' ' + this.surName)
+            }
+        }
+        thisMeth.thisFun();
+
+        // Define a Constructor Function
+
+        function dogss() {
+            this.name = 'lepord',
+                this.color = 'Blue',
+                this.numlegs = 4
+        }
+        let bluedog = new dogss();
+        console.log(bluedog)
+
+        // Use a Constructor to Create Objects
+
+        function Cat() {
+            this.name = "Rupert";
+            this.color = "brown";
+            this.numLegs = 4;
+        }
+        let hound = new Cat;
+        console.log(hound.color)
+
+        // Extend Constructors to Receive Arguments
+
+        function Dog(name, color) {
+            this.name = name;
+            this.color = color;
+            this.numLegs = 4;
+        }
+        let terrier = new Dog('Allu', 'Black');
+        console.log(terrier);
+
+        // Verify an Object's Constructor with instanceof
+
+        function House(numBedrooms) {
+            this.numBedrooms = numBedrooms;
+        }
+        let myHouse = new House(4)
+        console.log(myHouse)
+        myHouse instanceof House;
+
+        // Understand Own Properties
+
+        function Bird(name) {
+            this.name = name;
+            this.numLegs = 2;
+        }
+
+        let canary = new Bird("Tweety");
+        let ownProps = [];
+
+        for (let property in canary) {
+            if (canary.hasOwnProperty(property)) {
+                ownProps.push(property)
+            }
+        }
+        console.log(ownProps);
+
+        // Use Prototype Properties to Reduce Duplicate Code
+
+        function Dog(name) {
+            this.name = name;
+        }
+
+        Dog.prototype.numLegs = 4;
+        let beagle = new Dog("Snoopy");
+        console.log(beagle);
+
+
+        // Iterate Over All Properties
+
+        function Dog(name) {
+            this.name = name;
+        }
+
+        Dog.prototype.numLegs = 4;
+
+        let beagle2 = new Dog("Snoopy");
+
+        let ownProps2 = [];
+        let prototypeProps = [];
+
+        for (let property in beagle2) {
+            if (beagle.hasOwnProperty(property)) {
+                ownProps2.push(property);
+            } else {
+                prototypeProps.push(property)
+            }
+        }
+        console.log(ownProps2);
+        console.log(prototypeProps);
+
+        // Understand the Constructor Property
+
+        function Dog(name) {
+            this.name = name;
+        }
+
+        function checkContractor(checkFal) {
+            if (checkFal.constructor === Dog) {
+                console.log(true)
+            } else {
+                console.log(false)
+            }
+        }
+        checkContractor(Dog);
+
+        // Change the Prototype to a New Object
+
+        function Tom(name) {
+            this.name = name;
+        }
+        Tom.prototype = {
+            // Remember to Set the Constructor Property when Changing the Prototype
+            constructor: Tom,
+            numLegs : 4,
+            eat: function(){
+                console.log('Tom dringk a milk')
+            },
+            nature: function(){
+                console.log('Tom is a good cat')
+            }
+        }
+        console.log(Tom.prototype);
+    </script>
+
+</body>
+
+</html>
